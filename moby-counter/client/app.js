@@ -1,7 +1,7 @@
 (function(){
 
-  var width = 110
-  var height = 100
+  var width = 150
+  var height = 33
   var connectionStatus = false
   var dataLoaded = false
 

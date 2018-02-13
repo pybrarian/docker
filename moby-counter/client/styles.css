@@ -8,9 +8,9 @@ html,body{
 .whale{
   background-color:#ffffff;
   position:absolute;
-  background-image: url(moby.png);
+  background-image: url(logo.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 #holder{

@@ -1,8 +1,18 @@
-web:
-  build: .
-  ports:
-     - "80:80"
-  links:
-    - "redis:redis"
-redis:
-  image: redis:alpine
+version: "3"
+
+services:
+   redis:
+     image: redis:alpine
+     volumes:
+       - redis_data:/data
+     restart: always
+   mobycounter:
+     depends_on:
+       - redis
+     image: pybrarian/moby-counter:code4lib-fork
+     ports:
+       - "8080:80"
+     restart: always
+
+volumes:
+    redis_data:
